@@ -1,3 +1,4 @@
+#!/bin/bash -x
 echo $"Enter number a: "
 read a
 echo $"Enter number b: "
@@ -13,3 +14,7 @@ result3=$((c+a/b))
 echo $result3
 result4=$((a%b+c))
 echo $result4
+arithmaticOperation[result1]=$result1
+arithmaticOperation[result2]=$result2
+arithmaticOperation[result3]=$result3
+arithmaticOperation[result4]=$result4
