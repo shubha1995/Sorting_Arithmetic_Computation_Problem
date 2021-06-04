@@ -24,3 +24,22 @@ do
   array[i]=${arithmaticOperation[result$((i+1))]}
 done
 echo "${array[@]}"
+
+function descendingOrderSort()
+{
+	for(( i=0; i<${#array[@]}; i ++ ))
+	do
+		for(( i=0; i<${#array[@]}-1; i ++ ))
+		do
+			if (( $(echo "${array[indexOne+1]} > ${array[indexOne]}" | bc -l ) ))
+			then
+				temp=${array[indexOne]}
+				array[indexOne]=${array[indexOne+1]}
+				array[indexOne+1]=$temp
+			fi
+		done
+	done
+	echo "To data descending order"${array[@]}
+}
+
+descendingOrderSort ${array[@]}
