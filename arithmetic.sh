@@ -4,4 +4,8 @@ echo $"Enter number b: "
 read b
 echo $"Enter number c: "
 read c
-echo $a $b $c
+
+result1=$((a+b*c))
+echo $result1
+result2=$((a*b+c))
+echo $result2
